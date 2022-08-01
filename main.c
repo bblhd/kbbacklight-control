@@ -1,4 +1,4 @@
-// credit to user 'Quasímodo' on stackoverflow on 5th July 2021 from
+// thanks to user 'Quasímodo' on stackoverflow on 5th July 2021 from
 	// https://unix.stackexchange.com/questions/625144/how-to-write-a-script-that-edits-brightness-file-in-sys-class-backlight-ideapad
 
 // controls keyboard backlight brightness on a t2linux macbookpro, may work on other apple devices
