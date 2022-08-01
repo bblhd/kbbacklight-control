@@ -1,24 +1,9 @@
-CC:=gcc
-CFLAGS:=
-LDFLAGS:=
+name:=kbbacklightctl
 
-suppress:=-Wno-parentheses
-
-basedir:=$(shell pwd)
-outfile:=$(shell basename "$(basedir)")
-cfiles:=$(wildcard *.c)
-objects:=$(cfiles:.c=.o)
-
-compile: $(outfile)
+compile:
+	gcc main.c -no-pie -o $(name)
 
 install: $(outfile)
-	chown root $(outfile)
-	chmod u+s $(outfile)
-	mv $(outfile) /usr/local/bin
-
-$(outfile): $(objects)
-	$(CC) -o $@ $^ $(LDFLAGS) -no-pie
-
-$(objects): %.o: %.c
-	$(CC) -c $(suppress) $(CFLAGS) $< -o $@
-
+	chown root $(name)
+	chmod u+s $(name)
+	mv $(name) /usr/local/bin
