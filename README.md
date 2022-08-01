@@ -1,5 +1,5 @@
 # kbbacklight-control
-Made to easily control keyboard backlight on t2 macbook pro running linux
+Made to easily control keyboard backlight on t2 macbook pro running linux.
 
 ## How to compile
 Compile using `make` or `make compile`, and then install it to /usr/local/bin by running `make install` as root.
