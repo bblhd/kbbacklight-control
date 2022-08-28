@@ -11,4 +11,5 @@ Run program with command `kbbacklightctl`.
 - if given 1 numeric input beginning without a plus or minus, sets the current brightness to it
 
 ## Thanks
-Thanks to user 'Quasímodo' on stackoverflow for their [solution](https://unix.stackexchange.com/a/625266/533187) to this problem.
+Thanks to user 'Quasímodo' on stackoverflow for their
+[solution](https://unix.stackexchange.com/a/625266/533187) to this problem on Lenovo ideapads.
