@@ -12,4 +12,4 @@ Run program with command `kbbacklightctl`.
 
 ## Thanks
 Thanks to user 'Quasímodo' on stackoverflow for their
-[solution](https://unix.stackexchange.com/a/625266/533187) to this problem on Lenovo ideapads.
+[solution](https://unix.stackexchange.com/a/625266/533187) to this problem for Lenovo ideapads.
