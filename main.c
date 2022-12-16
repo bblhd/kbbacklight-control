@@ -9,28 +9,28 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#define BUFSIZE 10
+#define BUFSIZE 8
 
 int main(int argc, char **argv) {
-	long amount = 0;
+	int amount = 0;
 	
-	if (argc == 2) if ((amount = strtol(argv[1], NULL, 10)) == 0) return 1;
+	if (argc == 2 && (amount = strtol(argv[1], NULL, 10)) == 0) return 1;
 	
 	FILE *fp;
 	char scurr[BUFSIZE];
 	if ((fp = fopen("/sys/class/leds/apple::kbd_backlight/brightness", "r+")) && fgets(scurr, BUFSIZE, fp)) {
-		if (argc == 2) {
+		if (argc == 1) {
+			printf("%ld\n", strtol(scurr, NULL, 10));
+		} else if (argc == 2) {
 			if (*argv[1] == '-' || *argv[1] == '+') {
 				amount += strtol(scurr, NULL, 10);
 				if (amount < 0) amount = 0;
 			}
 			rewind(fp);
 			fprintf(fp, "%ld\n", amount);
-		} else {
-			printf("%ld\n", strtol(scurr, NULL, 10));
 		}
 		fclose(fp);
 	} else return 2;
 	
-	return(0);
+	return 0;
 }
